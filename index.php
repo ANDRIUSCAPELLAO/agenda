@@ -51,10 +51,10 @@ endif;
   <label for="senha">Senha:</label>
   <input id="senha" type="password" name="senha" maxlength="50" />
   <input type="submit" name="ok" value="Entrar" class="login" />
-    
+  <?php echo isset ($erro) ? $erro : ''; ?>  
 </form>
 
-<?php echo isset ($erro) ? $erro : ''; ?>
+
 
 	<div id="rodape">
     <legend>Desenvolvido por andriuscapellao@gmail.com (2016)<br />	
