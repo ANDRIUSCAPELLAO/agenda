@@ -1,0 +1,207 @@
+/*  
+Theme Name: TCC
+Author: Andrius Capellao
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+
+body { background-image: url("./images/Mapamundo.jpg");
+background-repeat: no repeat;
+width:100%; height:100%;
+-background-size:contain;
+background-position:top;
+background-attachment:fixed;
+overflow-x: hidden; 
+overflow-y: hidden; 
+	}
+	
+	
+h1 {
+	color:#FFF;
+	text-align:center;
+	background-color:#06C;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 32px;
+}
+
+
+h2 {
+	color:#009;
+	text-align:left;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 21px;
+}
+
+
+h3 {
+	color:#000;
+	text-align:left;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 21px;
+	background-color:#FFF;
+}
+
+h4 {
+	color:#009;
+	text-align:right;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 36px;	 
+}
+
+
+h5 {
+	
+font-family: Garamond, serif;
+-line-height: 1em;
+color: #ffffff;
+font-size: 65px;
+text-align:left;
+-text-transform:lowercase;
+text-shadow:0px 0px 0 rgb(222,222,222),1px 1px 0 rgb(216,216,216),2px 2px 0 rgb(209,209,209),3px 3px 0 rgb(203,203,203),4px 4px 0 rgb(196,196,196),5px 5px 0 rgb(189,189,189),6px 6px 0 rgb(183,183,183),7px 7px 0 rgb(176,176,176), 8px 8px 0 rgb(169,169,169),9px 9px 8px rgba(0,0,0,0.65),9px 9px 1px rgba(0,0,0,0.5),0px 0px 8px rgba(0,0,0,.2);}
+
+
+h6  {
+font-family: Garamond, serif;
+line-height: 1em;
+color: #ffffff;
+font-size: 40px;
+text-align:center;
+text-shadow:0px 0px 0 rgb(222,222,222),1px 1px 0 rgb(216,216,216),2px 2px 0 rgb(209,209,209),3px 3px 0 rgb(203,203,203),4px 4px 0 rgb(196,196,196),5px 5px 0 rgb(189,189,189),6px 6px 0 rgb(183,183,183),7px 7px 0 rgb(176,176,176), 8px 8px 0 rgb(169,169,169),9px 9px 8px rgba(0,0,0,0.65),9px 9px 1px rgba(0,0,0,0.5),0px 0px 8px rgba(0,0,0,.2);
+}
+
+
+#mapa{
+	width: 850px;
+	height: 500px;
+	border: solid;
+	border-color: #009;
+	position: absolute;
+	left: 400px;
+	top: 105px;
+	visibility: visible;
+    	}
+		
+#rodape{
+	position: absolute;
+	left: 25px;
+	top: 600px;
+	font-weight: bold;
+	}		
+	
+		
+#login {
+	-position: center;
+	-position:fixed;
+	width: 155px;
+	padding: 30px;
+	-background: #6495ED;
+	background: #a5b8da;
+	overflow: hidden;
+	/* Border style */
+	border: 1px solid #cccccc;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	/* Border Shadow */
+	-moz-box-shadow: 2px 2px 2px #cccccc;
+	-webkit-box-shadow: 2px 2px 2px #cccccc;
+	box-shadow: 2px 2px 2px #cccccc;
+	/*centralizar formulario*/
+	left: 50%;
+	margin: -130px 0 0 -160px;
+	position: absolute;
+	top: 50%;
+}
+
+	
+#clienteform {
+	width: 850px;
+	background: #f0f0f0;
+	overflow: auto;
+	/* Border style */
+	border: 1px solid #cccccc;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	/* Border Shadow */
+	-moz-box-shadow: 2px 2px 2px #cccccc;
+	-webkit-box-shadow: 2px 2px 2px #cccccc;
+	box-shadow: 2px 2px 2px #cccccc;
+	
+    }
+    
+	
+label {
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left; margin-right:15px;
+    font-weight: bold;
+    margin-right:10px;
+    text-align: right;
+    width: 120px;
+    line-height: 25px;
+    font-size: 15px;
+    }
+	
+	
+label1 {
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left; 
+    font-weight: bold;
+    text-align: left;
+    width: 120px;
+    line-height: 25px;
+    font-size: 15px;
+    }	
+	
+	
+
+		
+.login{
+    float:none; 
+	margin-left:15px;
+    margin:10px 55px 10px 0;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px 55px;
+	cursor:pointer;
+	-color: #444;
+    color: #fff;
+    text-align: center;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
+    -text-shadow: 0 -1px 1px #64799e;
+ 
+    /* Background gradient */
+    -background: #a5b8da;
+	background:#6495ED;
+    background: -moz-linear-gradient
+       (top, #a5b8da 0%, #7089b3 100%);
+    background: -webkit-gradient
+       (linear, 0% 0%, 0% 100%,
+       from(#a5b8da), to(#7089b3));
+ 
+    /* Border style */
+    border: 1px solid #5c6f91;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+ 
+    /* Box shadow */
+    -moz-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+    box-shadow: inset 0 1px 0 0 #aec3e5;
+ 
+    }
+	
+
+	
+	
+
+	
+
+  
