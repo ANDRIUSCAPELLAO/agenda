@@ -19,7 +19,7 @@ class Login extends Conect {
 
 	public function logar(){
 		$pdo = parent::getDB();
-		$logar = $pdo->prepare("SELECT * FROM usuario WHERE login= ? AND senha =?");
+		$logar = $pdo->prepare("SELECT * FROM usuarios WHERE login= ? AND senha =?");
 		$logar->bindValue(1,$this->getLogin());
 		$logar->bindValue(2,$this->getSenha());
 		$logar->execute();
