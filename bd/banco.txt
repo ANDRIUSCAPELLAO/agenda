@@ -1,12 +1,37 @@
 CREATE DATABASE `agenda` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
 
-CREATE TABLE `usuarios` (
+CREATE TABLE IF NOT EXISTS `usuarios` (
 	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-	`login` VARCHAR( 50 ) NOT NULL ,
+	`nome` VARCHAR( 50 ) NOT NULL ,
+	`usuario` VARCHAR( 25 ) NOT NULL ,
 	`senha` VARCHAR( 40 ) NOT NULL ,
+	`email` VARCHAR( 100 ) NOT NULL ,
+	`nivel` INT(1) UNSIGNED NOT NULL DEFAULT '1',
+	`ativo` BOOL NOT NULL DEFAULT '1',
+	`cadastro` DATETIME NOT NULL ,
 	PRIMARY KEY (`id`),
-	UNIQUE KEY `login` (`login`)
-	);
+	UNIQUE KEY `usuario` (`usuario`),
+	KEY `nivel` (`nivel`)
+) ENGINE=MyISAM ;
 
 
-INSERT INTO `usuarios`(`id`, `login`, `senha`) VALUES (NULL,'teste',SHA1('teste'));
+INSERT INTO `usuarios` VALUES (NULL, 'Usuário Teste', 'teste', SHA1( 'teste' ), 'teste@teste.com.br', 1, 1, NOW( ));
+INSERT INTO `usuarios` VALUES (NULL, 'Administrador Teste', 'admin', SHA1( 'admin' ), 'admin@admin.com.br', 2, 1, NOW( ));
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `agenda` (
+	 `id` int(11) NOT NULL auto_increment,
+	 `evento` varchar(200) NOT NULL,
+	 `dtevento` varchar(10) NOT NULL,
+	 `autor` varchar(200) NOT NULL,
+	 `data` timestamp NOT NULL default CURRENT_TIMESTAMP,
+	 `hora` varchar(5) NOT NULL,
+	 `conteudo` text NOT NULL,
+	 `local` varchar(200) NOT NULL,
+	 PRIMARY KEY  (`id`)
+   ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
