@@ -1,0 +1,24 @@
+CREATE DATABASE `rz2` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
+
+CREATE TABLE `usuario` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`login` VARCHAR( 50 ) NOT NULL ,
+	`senha` VARCHAR( 40 ) NOT NULL ,
+	PRIMARY KEY (`id`),
+	UNIQUE KEY `login` (`login`)
+	);
+
+CREATE TABLE `cliente` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(255) NOT NULL,
+	`telefone` VARCHAR(12),
+    	`email` VARCHAR(255),
+	PRIMARY KEY(`id`)
+	);
+
+
+INSERT INTO `usuarios`(`id`, `login`, `senha`) VALUES (NULL,'teste',SHA1('teste'));
+INSERT INTO `cliente`(`id`, `nome`, `telefone`,`email`) VALUES (NULL,'andrius','5185371147','andriuscapellao@gmail.com');
+INSERT INTO `cliente`(`id`, `nome`, `telefone`,`email`) VALUES (NULL,'bianca','5185371147','andriuscapellao@gmail.com');
+INSERT INTO `cliente`(`id`, `nome`, `telefone`,`email`) VALUES (NULL,'carlos','5185371147','andriuscapellao@gmail.com');
+INSERT INTO `cliente`(`id`, `nome`, `telefone`,`email`) VALUES (NULL,'ana,'5185371147','andriuscapellao@gmail.com');
