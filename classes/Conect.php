@@ -11,7 +11,7 @@ private static function conectar(){
 	
 	try{
 		if (self::$instance == null):
-		$dsn = "mysql:host=localhost;dbname=rz2";
+		$dsn = "mysql:host=localhost;dbname=agenda";
 		self::$instance = new PDO($dsn, self::USER, self::PASS);
 		self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
